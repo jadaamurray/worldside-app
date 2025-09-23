@@ -4,12 +4,14 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
+type Status = "idle" | "loading" | "success" | "error";
+
 export default function SubscribeForm() {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle"|"loading"|"success"|"error">("idle");
+  const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
 
-  async function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
     setMessage("");
@@ -21,15 +23,16 @@ export default function SubscribeForm() {
         body: JSON.stringify({ email }),
       });
 
-      const data = await res.json();
+      const data: { ok?: boolean; error?: string } = await res.json();
       if (!res.ok) throw new Error(data?.error ?? "Something went wrong");
 
       setStatus("success");
       setMessage("Thanks! Check your inbox for a confirmation.");
       setEmail("");
-    } catch (err: any) {
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Unable to subscribe right now.";
       setStatus("error");
-      setMessage(err?.message ?? "Unable to subscribe right now.");
+      setMessage(msg);
     }
   }
 
@@ -44,12 +47,10 @@ export default function SubscribeForm() {
         className="h-11"
         aria-label="Email address"
       />
-      <Button type="submit" className="h-11" disabled={status==="loading"}>
+      <Button type="submit" className="h-11" disabled={status === "loading"}>
         {status === "loading" ? "Submitting..." : "Join"}
       </Button>
-      <p className="sr-only" aria-live="polite">
-        {message}
-      </p>
+      <p className="sr-only" aria-live="polite">{message}</p>
     </form>
   );
 }
