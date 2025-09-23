@@ -46,6 +46,9 @@
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
+  --background-day-1: oklch(95.466% 0.00182 249.199);
+  --background-day-2: oklch(90.553% 0.04997 205.841);
+  --foreground-day: oklch(10% 0 0); 
   --foreground: oklch(0.0516 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
@@ -80,6 +83,9 @@
 
 .dark {
   --background: oklch(0.141 0.005 285.823);
+  --background-night-1: oklch(19.022% 0.09767 296.221);
+  --background-night-2: oklch(13.457% 0.07759 287.096);
+  --foreground-night: oklch(95% 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
   --card-foreground: oklch(0.985 0 0);
@@ -110,6 +116,37 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
+}
+
+body {
+  background:
+    /* grain layer */
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    /* gradient base */
+    linear-gradient(
+      135deg,
+      var(--background-day-1) 0%,
+      var(--background-day-2) 100%
+    );
+  background-size: 3px 3px, 5px 5px, cover;
+  background-blend-mode: overlay;
+  color: var(--foreground-day);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.dark body {
+  background:
+    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(
+      135deg,
+      var(--background-night-1) 0%,
+      var(--background-night-2) 100%
+    );
+  background-size: 3px 3px, 5px 5px, cover;
+  background-blend-mode: overlay;
+  color: var(--foreground-night);
 }
 
 @layer base {
