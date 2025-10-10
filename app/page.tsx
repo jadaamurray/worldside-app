@@ -24,12 +24,16 @@ export default function Page() {
       <section className="relative">
         <div className="relative mx-auto max-w-6xl px-6 pt-8 pb-16 md:py-20">
           <Image
-                alt="Thailand coastline"
-                src="https://images.unsplash.com/photo-1596879857570-7b6b9018bcb6?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                fill
-                priority
-                className="object-cover"
-              />
+            alt="Thailand coastline"
+            src="https://images.unsplash.com/photo-1596879857570-7b6b9018bcb6?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            fill
+            priority
+            className="object-cover"
+          />
+
+          {/*  dark overlay for readability */}
+            <div className="absolute inset-0 bg-white/30" />
+
           <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
             <div>
               <span className="inline-block rounded-full px-3 py-1 text-xs font-medium bg-background text-foreground border-white/30">
