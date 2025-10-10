@@ -22,7 +22,7 @@ export default function Page() {
 
       {/* HERO */}
       <section className="relative">
-        <div className="mx-auto max-w-6xl px-6 pt-8 pb-16 md:py-20">
+        <div className="relative mx-auto max-w-6xl px-6 pt-8 pb-16 md:py-20">
           <Image
                 alt="Thailand coastline"
                 src="https://images.unsplash.com/photo-1596879857570-7b6b9018bcb6?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -30,13 +30,13 @@ export default function Page() {
                 priority
                 className="object-cover"
               />
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
             <div>
               <span className="inline-block rounded-full px-3 py-1 text-xs font-medium bg-background text-foreground border-white/30">
                 Feel the experience
               </span>
-              <h1 className="mt-4 text-4xl md:text-6xl font-semibold leading-tight text-white drop-shadow-[0_2px_16px_rgba(0,0,0,.35)]">
-                Explore Thailand With Friends - Even If You’re Travelling Solo
+              <h1 className="mt-4 text-4xl md:text-6xl font-abril italic leading-tight text-white drop-shadow-[0_2px_16px_rgba(0,0,0,.35)]">
+                Explore Thailand With Friends Even If You’re Travelling Solo
               </h1>
               <p className="mt-4 text-foreground md:text-lg">
                 Curated 10-day route: Bangkok → Chiang Mai → Krabi → Koh Tao.
@@ -72,7 +72,7 @@ export default function Page() {
 
       {/* WAITLIST */}
       <section id="waitlist" className="mx-auto max-w-6xl px-6 py-16 text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold">Be first to know when bookings open</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold">Join our insiders list for <span className="underline decoration-2 underline-offset-4">priority booking </span> access</h2>
         <p className="mt-2 text-muted-foreground">
           Limited spots. Drop your email for early access to Thailand 2026.
         </p>
@@ -98,12 +98,12 @@ export default function Page() {
           <HighlightCard
             title="Krabi Beaches"
             sub="Limestone cliffs"
-            img="https://images.unsplash.com/photo-1543248939-ff40856f65d4?q=80&w=1200&auto=format&fit=crop"
+            img="https://images.unsplash.com/photo-1580981072760-b72ef15a545e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1548"
           />
           <HighlightCard
             title="Koh Tao Diving"
-            sub="Scuba paradise"
-            img="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1200&auto=format&fit=crop"
+            sub="Island paradise"
+            img="https://images.unsplash.com/photo-1699734210448-f83a8e5da5d3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
           />
         </div>
       </section>
@@ -124,7 +124,7 @@ export default function Page() {
         <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden ring-1 ring-black/10 dark:ring-white/15">
           <Image
             alt="Travellers in the jungle"
-            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1600&auto=format&fit=crop"
+            src="/images/group-trip.jpg"
             fill
             className="object-cover"
           />

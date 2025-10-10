@@ -124,6 +124,9 @@
   font-family: var(--font-chewy), cursive;
 }
 
+.font-abril {
+  font-family: var(--font-abril), serif;
+}
 @layer base {
   * {
     @apply border-border outline-ring/50;
