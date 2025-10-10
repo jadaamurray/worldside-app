@@ -70,6 +70,18 @@ export default function Page() {
         </div>
       </section>
 
+      {/* WAITLIST */}
+      <section id="waitlist" className="mx-auto max-w-6xl px-6 py-16 text-center">
+        <h2 className="text-3xl md:text-4xl font-semibold">Be first to know when bookings open</h2>
+        <p className="mt-2 text-muted-foreground">
+          Limited spots. Drop your email for early access to Thailand 2026.
+        </p>
+        <div className="mt-6">
+          <SubscribeForm />
+          <p className="mt-3 text-xs text-muted-foreground">No spam. Unsubscribe anytime.</p>
+        </div>
+      </section>
+
       {/* HIGHLIGHTS */}
       <section id="highlights" className="mx-auto max-w-6xl px-6 py-14">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -116,18 +128,6 @@ export default function Page() {
             fill
             className="object-cover"
           />
-        </div>
-      </section>
-
-      {/* WAITLIST */}
-      <section id="waitlist" className="mx-auto max-w-6xl px-6 py-16 text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold">Be first to know when bookings open</h2>
-        <p className="mt-2 text-muted-foreground">
-          Limited spots. Drop your email for early access to Thailand 2026.
-        </p>
-        <div className="mt-6">
-          <SubscribeForm />
-          <p className="mt-3 text-xs text-muted-foreground">No spam. Unsubscribe anytime.</p>
         </div>
       </section>
 
