@@ -101,12 +101,12 @@ export default function Page() {
         <div>
           <h2 className="text-3xl md:text-4xl font-semibold">Why Worldside?</h2>
           <p className="mt-3 text-muted-foreground">
-            We plan the route, stays, and activities—so you can focus on the people and the moments.
+            We plan the route, stays, and activities so you can focus on the people and the moments.
           </p>
           <ul className="mt-6 space-y-3">
             <LI icon={<Waves className="h-5 w-5" />}>Seamless itinerary & transfers</LI>
             <LI icon={<Compass className="h-5 w-5" />}>Guided activities & flexible free time</LI>
-            <LI icon={<Trees className="h-5 w-5" />}>Make friends for life—travel solo, never alone</LI>
+            <LI icon={<Trees className="h-5 w-5" />}>Make friends for life. Travel solo, never alone</LI>
           </ul>
         </div>
         <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden ring-1 ring-black/10 dark:ring-white/15">
