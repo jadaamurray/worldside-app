@@ -75,7 +75,9 @@ export default function Page() {
         <div className="bg-accent rounded-md px-4 py-2">
           <p className="text-foreground md:text-lg font-semibold text-center">
             Curated 10-day route: Bangkok → Chiang Mai → Krabi → Koh Tao.
-            Activities, accommodation, and new friends—sorted.
+          </p>
+          <p className="text-foreground md:text-lg font-semibold text-center">
+            Activities, accommodation, and new friends sorted.
           </p>
         </div>
       </div>

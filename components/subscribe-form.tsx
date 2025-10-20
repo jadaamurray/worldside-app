@@ -3,20 +3,19 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export default function SubscribeForm() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
-  const [message, setMessage] = useState("");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setStatus("loading");
-    setMessage("");
 
     try {
+      setStatus("loading");
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -27,12 +26,13 @@ export default function SubscribeForm() {
       if (!res.ok) throw new Error(data?.error ?? "Something went wrong");
 
       setStatus("success");
-      setMessage("Thanks! Check your inbox for a confirmation.");
       setEmail("");
+      toast.success("You're on the list! 🎉", {
+        description: "We'll email you first when trips open."});
     } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : "Unable to subscribe right now.";
       setStatus("error");
-      setMessage(msg);
+      toast.error("Something went wrong 😬", {
+        description: "Please try again later."});
     }
   }
 
@@ -40,6 +40,7 @@ export default function SubscribeForm() {
     <form onSubmit={onSubmit} className="w-full max-w-md mx-auto flex gap-2">
       <Input
         type="email"
+        id="email"
         required
         placeholder="Enter your email"
         value={email}
@@ -47,10 +48,10 @@ export default function SubscribeForm() {
         className="h-11"
         aria-label="Email address"
       />
-      <Button type="submit" className="h-11" disabled={status === "loading"}>
+      <Button type="submit" className="h-11" >
         {status === "loading" ? "Submitting..." : "Join"}
       </Button>
-      <p className="sr-only" aria-live="polite">{message}</p>
+      <p className="sr-only" aria-live="polite"></p>
     </form>
   );
 }
