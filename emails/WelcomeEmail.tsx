@@ -65,7 +65,7 @@ export default function WelcomeEmail({ name }: { name?: string }) {
             >
               {name ? `Hi ${name},` : "Hi there,"} <br />
               We’re so glad you joined our travel community. Your first adventure
-              starts here — curated trips, beautiful stays, and friends you haven’t met yet.
+              starts here - curated trips, beautiful stays, and friends you haven’t met yet.
             </Text>
 
             <Link
@@ -131,7 +131,7 @@ export default function WelcomeEmail({ name }: { name?: string }) {
               }}
             >
               You’re receiving this email because you joined the Worldside waitlist.  
-              We’ll only send good stuff — no spam.
+              We’ll only send good stuff, no spam.
             </Text>
             <Link
               href="https://goworldside.com/unsubscribe"
