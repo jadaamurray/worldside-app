@@ -9,7 +9,7 @@ const chewy = Chewy({ subsets: ["latin"], weight: "400", variable: "--font-chewy
 const abril = Abril_Fatface({ subsets: ["latin"], weight: "400", variable: "--font-abril"});
 
 export const metadata: Metadata = {
-  title: "Worldside — Thailand Trips for Solo Travelers",
+  title: "Worldside - Thailand Trips for Solo Travelers",
   description: "Get trip drops, behind-the-scenes, and early access.",
 };
 
