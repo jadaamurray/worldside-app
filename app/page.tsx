@@ -135,7 +135,7 @@ export default function Page() {
     <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden ring-1 ring-black/10 dark:ring-white/15">
       <Image
         alt="Travellers in the jungle"
-        src="/images/group-trip.jpg"
+        src="/images/group-pic.jpg"
         fill
         className="object-cover"
       />
