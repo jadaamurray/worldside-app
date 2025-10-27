@@ -99,12 +99,12 @@ export default function Page() {
       <HighlightCard
         title="Bangkok Nights"
         sub="Rooftops & rivers"
-        img="/images/bangkok-night2.jpg"
+        img="/images/bangkok-night.jpg"
       />
       <HighlightCard
         title="Chiang Mai Jungle"
         sub="Temples & treks"
-        img="/images/chiang-mai.jpg"
+        img="/images/chiang-mai.jpeg"
       />
       <HighlightCard
         title="Krabi Beaches"
