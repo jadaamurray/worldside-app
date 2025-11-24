@@ -39,7 +39,7 @@ export default function Page() {
               <span className="inline-block rounded-full px-3 py-1 text-xs font-medium bg-background text-foreground border-white/30">
                 Feel the experience
               </span>
-              <h1 className="mt-4 text-4xl md:text-6xl text-center font-abril italic leading-tight text-white drop-shadow-[0_2px_16px_rgba(0,0,0,.35)]">
+              <h1 className="mt-4 text-4xl md:text-6xl text-center font-outfit italic leading-tight text-white drop-shadow-[0_2px_16px_rgba(0,0,0,.35)]">
                 Explore Thailand With Friends Even If You’re Travelling Solo
               </h1>
 
