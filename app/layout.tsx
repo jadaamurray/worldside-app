@@ -1,24 +1,25 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Outfit, Chewy, Abril_Fatface } from "next/font/google";
+import { Outfit, Chewy, Abril_Fatface, Anton } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
-const chewy = Chewy({ subsets: ["latin"], weight: "400", variable: "--font-chewy"});
-const abril = Abril_Fatface({ subsets: ["latin"], weight: "400", variable: "--font-abril"});
+const chewy = Chewy({ subsets: ["latin"], weight: "400", variable: "--font-chewy" });
+const abril = Abril_Fatface({ subsets: ["latin"], weight: "400", variable: "--font-abril" });
+const anton = Anton({ subsets: ["latin"], weight: "400", variable: "--font-anton" });
 
 export const metadata: Metadata = {
-  title: "Worldside - Thailand Trips for Solo Travelers",
-  description: "Get trip drops, behind-the-scenes, and early access.",
+  title: "Worldside | Solo Trips, Never Alone",
+  description: "Bold group trips for solo travelers. Trip drops, behind-the-scenes, and early access.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${outfit.className} ${chewy.variable} ${abril.variable} font-sans antialiased bg-background text-foreground`}>
+      <body className={`${outfit.className} ${chewy.variable} ${abril.variable} ${anton.variable} font-sans antialiased bg-background text-foreground`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <main>{children}</main>
+          {children}
           <Toaster />
         </ThemeProvider>
       </body>
