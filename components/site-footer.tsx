@@ -9,7 +9,7 @@ export default function SiteFooter() {
             Worldside<span className="text-bubblegum">.</span>
           </div>
           <p className="mt-3 text-cream/70 max-w-xs">
-            Solo trips. Never alone. We plan the route — you bring the energy.
+            Solo trips. Never alone. We plan the route, you bring the energy.
           </p>
         </div>
 
